@@ -4,7 +4,7 @@ import NavbarMain from './Navbar'
 import { Focusroom } from './Focusroom'
 import Calendar from './Calendar'
 import './pomodoro.css'
-
+import Todomain from './Todo/Todo-main'
 
 
 export const Productivity = () => {
@@ -25,7 +25,9 @@ export const Productivity = () => {
     <Calendar />
   </div>
 </section>
-
+<section>
+<Todomain/>
+</section>
       </div>
     
     </div>
