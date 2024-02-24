@@ -1,6 +1,6 @@
 .main-pomo {
     width: 400px;
-    height: 385px;
+    height: 300px;
     flex-shrink: 0;
     background-image: url(https://s3-alpha-sig.figma.com/img/41bd/8aef/12af99ded8eec37cc301d5e302c21f72?Expires=1709510400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=Tq-ILKHuVLVS6L8-giKotLSB283mp1p0rKHy2PTXR4OJO5uBZHH9~hLXKTOvRlSgknFrpzQDy~b8EkX0Gth8OQ77MKfZ2w4lmyTUnq7ybQkM3PC989VFQQ91FcWMHUB-MhzYecRj75BQrBGNcBItU1PTi1i6okIv58qXKAuHZaLs7RO3ZaVqYEnrgZnybr1oARQTvOpqFL6K5vfcWs6bQMDdXaynV1zk1w8HdgqMNlnSIivhoavKGtd5-Q2130JFjbzXMOSlnjcxRU6Dw0yk8S5ji6DNYT1qWw0Ao8gXtWcft0FODuF72MPOq~mJELgEWGZ~FlSBH6VadEc3ImmCNA__);
 }
@@ -8,7 +8,7 @@
 .focus {
 
     width: 500px;
-    height: 385px;
+    height: 300px;
     flex-shrink: 0;
  
     background-color: #2A2A2A;
@@ -22,12 +22,12 @@
     padding: 10px;
 }
 
-img {
-    height: 20px;
+.img {
+    height: 200px;
 }
 .calendar{
    width: 400px;
-    height: 385px;
+    height: 300px;
     flex-shrink: 0;
     background-color: rgb(40, 40, 40);
     color: white;
@@ -42,3 +42,20 @@ img {
     display: flex;
 justify-content: space-between;
 }
+.widget{
+    width: 500px;
+    height: 300px;
+
+
+}
+.stick{
+    background-color: white;
+    width: 400px;
+    height: 300px;
+
+}
+
+.goals{
+    height: 170px;
+    padding: 20px;
+    background: #f4ece1; background-image: radial-gradient(at 97.0% 19.0%, hsl(53, 50%, 57%) 0px, transparent 50%),radial-gradient(at 54.0% 33.0%, hsl(122, 80%, 36%) 0px, transparent 50%),radial-gradient(at 40.0% 65.0%, hsl(158, 91%, 26%) 0px, transparent 50%),radial-gradient(at 71.0% 20.0%, hsl(170, 52%, 60%) 0px, transparent 50%),radial-gradient(at 80.0% 1.0%, hsl(261, 98%, 55%) 0px, transparent 50%)}

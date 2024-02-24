@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Form from "../Form/Form";
 import Todo from "../Todo/Todo";
 import Edit from "../Edit/Edit";
+import '../todo.css'
 
 const Todolist = () => {
   const [todoValue, setTodo] = useState([]);
@@ -34,20 +35,25 @@ const Todolist = () => {
   };
 
   return (
-    <div className="container bg-blue-950 mt-20 p-8 rounded-md">
+    <div className="container flex  items-center flex-col">
       <Form createTodo={createTodo} />
-      {todoValue.map((todo, idx) =>
-        todo.isEditing ? (
-          <Edit key={idx} editTodo={editTask} task={todo} />
-        ) : (
-          <Todo
-            task={todo}
-            key={idx}
-            deleteTodo={deleteTodo}
-            editTodo={editTodo}
-          />
-        )
-      )}
+      <div className="overflow-hidden max-h-96 text-black flex justify-center items-center">
+        <div className="flex flex-col text-black">
+          {todoValue.map((todo, idx) =>
+            todo.isEditing ? (
+              <Edit key={idx} editTodo={editTask} task={todo} />
+            ) : (
+              <Todo
+              className='text-black'
+                task={todo}
+                key={idx}
+                deleteTodo={deleteTodo}
+                editTodo={editTodo}
+              />
+            )
+          )}
+        </div>
+      </div>
     </div>
   );
 };

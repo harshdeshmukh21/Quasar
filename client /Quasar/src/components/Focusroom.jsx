@@ -4,9 +4,9 @@ import './pomodoro.css'
 
 export const Focusroom = () => {
   return (
-    <div className='focus'>
-        <img src={focus} />
-        <p>Focus-room</p>
+    <div className='focus '>
+        <img src={focus} className='img' />
+        <p className='mt-8'>Focus-room</p>
         </div>
   )
 }
