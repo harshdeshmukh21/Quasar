@@ -1,12 +1,9 @@
 import React from "react";
-import { Homepage } from "./components/homepage/Homepage.jsx";
+// import { Homepage } from "./components/homepage/Homepage.jsx";
 
 import { SignUp } from "./components/signup.jsx";
-<<<<<<< Updated upstream
-import Productivity from "./components/Productivity.jsx";
-=======
-import { Sticky } from "./components/sticky.jsx";
->>>>>>> Stashed changes
+// import { Productivity } from "./components/Productivity.jsx";
+
 // import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
@@ -14,8 +11,8 @@ function App() {
     <>
       {/* <Homepage /> */}
       {/* <Productivity />  */}
-      {/* <SignUp /> */}
-      <Sticky />
+      <SignUp />
+      {/* <Sticky /> */}
     </>
   );
 }

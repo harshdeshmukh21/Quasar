@@ -10,12 +10,13 @@ body {
 .Main {
   display: flex;
   height: 100vh;
+  background-image: url(./basjhala.png);
+  background-size: contain;
+  background-repeat: no-repeat;
 }
 
 .Left {
   flex: 1;
-  background-color: #18181b;
-  background-image: url(./artistic-blurry-colorful-wallpaper-background_58702-8546.avif);
   background-size: cover;
   color: #000000;
   align-items: center;
@@ -24,11 +25,8 @@ body {
 
 .Right {
   flex: 1;
-  background-color: #09090b;
   color: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-

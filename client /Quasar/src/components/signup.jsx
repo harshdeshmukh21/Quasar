@@ -53,7 +53,7 @@ export const SignUp = () => {
                 fontFamily="Montserrat, sans-serif"
                 color="white"
               >
-                Sign Up
+                Get started with Quasar.
               </Typography>
             </CardHeader>
             <CardBody className="flex flex-col gap-4">
