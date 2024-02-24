@@ -11,7 +11,7 @@ body {
 .Main {
   display: flex;
   flex-direction: column;
-  width: 50rem;
+  width: 25rem;
   margin-left: 320px;
   margin-top: 80px;
 }
@@ -29,7 +29,7 @@ body {
 .lower {
   flex: 4;
   background-color: #981de5;
-  color: black;
+  /* color: black; */
   display: flex;
   align-items: center;
   justify-content: center;

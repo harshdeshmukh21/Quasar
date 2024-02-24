@@ -3,3 +3,22 @@
 @tailwind utilities;
 
 
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Customize the scrollbar track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+/* Customize the scrollbar handle */
+::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 5px;
+}
+
+/* Customize the scrollbar handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #6B6EAB;
+}

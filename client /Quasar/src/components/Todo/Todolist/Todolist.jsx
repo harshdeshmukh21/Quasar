@@ -35,10 +35,10 @@ const Todolist = () => {
   };
 
   return (
-    <div className="container flex  items-center flex-col">
+    <div className="container flex  items-center flex-col overflow-auto">
       <Form createTodo={createTodo} />
-      <div className="overflow-hidden max-h-96 text-black flex justify-center items-center">
-        <div className="flex flex-col text-black">
+      <div className="overflow-auto max-h-96 text-black flex justify-center items-center">
+        <div className="flex flex-col text-black overflow-auto">
           {todoValue.map((todo, idx) =>
             todo.isEditing ? (
               <Edit key={idx} editTodo={editTask} task={todo} />

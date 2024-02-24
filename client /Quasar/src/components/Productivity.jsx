@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useContext} from 'react';
 import PomodoroTimer from './Pomodoro';
 import NavbarMain from './Navbar';
 import { Focusroom } from './Focusroom';
@@ -7,14 +7,33 @@ import Todomain from './Todo/Todo-main';
 import './pomodoro.css';
 import Quotes from './widget/Quotes';
 import Goals from './widget/Goals';
+import { UserAuth } from '../context/AuthContext';
+import { Sticky } from './sticky';
+import { Button } from '@material-tailwind/react';
+import { useNavigate } from 'react-router-dom';
 
 
 
 const Productivity = () => {
+
+  const {user , logOut} = UserAuth();
+
+  const navigate = useNavigate();
+
+  const LogOut = () => {
+    logOut();
+    navigate('/');
+  }
+
   return (
     <div>
       <div className="nav-main mt-5 w-full flex justify-center top-10 left-[10rem] md:left-[40rem]">
         <NavbarMain />
+        <h1 className="text-3xl text-white">Welcome {user.displayName}</h1>
+        <img src={user.photoURL} alt="masti" className='rounded-full' />
+        <Button color="red" buttonType="filled" size="regular" rounded={false} block={false} iconOnly={false} ripple="light" onClick={LogOut}>
+          Log Out
+        </Button>
       </div>
 
       <div className="main p-10  flex flex-col justify-center items-center ">
@@ -32,10 +51,11 @@ const Productivity = () => {
         <div className="flex justify-around mt-5 ">
           <div className="mx-2 bg-gray-700 rounded-md ">
             <Todomain />
-            
           </div>
           <div className="widget mx-1 rounded-md"><Goals /><Quotes/></div>
-          <div className="stick mx-1 rounded-md"></div>
+          <div className="stick mx-1 rounded-md">
+            <Sticky />
+          </div>
         </div>
       </div>
  

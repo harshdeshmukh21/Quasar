@@ -1,18 +1,17 @@
 import React from "react";
-// import { Homepage } from "./components/homepage/Homepage.jsx";
+import { AuthContextProvider } from "./context/AuthContext";
+import { Router } from "./Router";
+import { BrowserRouter } from "react-router-dom";
 
-import { SignUp } from "./components/signup.jsx";
-// import { Productivity } from "./components/Productivity.jsx";
-
-// import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 function App() {
   return (
     <>
-      {/* <Homepage /> */}
-      {/* <Productivity />  */}
-      <SignUp />
-      {/* <Sticky /> */}
+      <AuthContextProvider>
+        <BrowserRouter>
+        <Router />
+        </BrowserRouter>
+      </AuthContextProvider>
     </>
   );
 }
