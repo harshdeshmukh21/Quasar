@@ -2,10 +2,9 @@ import React from "react";
 // import { AuthContextProvider } from "./context/AuthContext";
 // import { Router } from "./Router";
 // import { BrowserRouter } from "react-router-dom";
-import JoinRoomContainer from "./components/joinroom";
-// import { AuthContextProvider } from "./context/AuthContext";
-// import { Router } from "./Router";
-// import { BrowserRouter } from "react-router-dom";
+import { AuthContextProvider } from "./context/AuthContext";
+import { Router } from "./Router";
+import { BrowserRouter } from "react-router-dom";
 
 // import { SignUp } from "./components/signup.jsx";
 // // import { Sticky } from "./components/sticky.jsx";
@@ -16,12 +15,11 @@ import JoinRoomContainer from "./components/joinroom";
 function App() {
   return (
     <>
-      {/* <AuthContextProvider>
+      <AuthContextProvider>
         <BrowserRouter>
           <Router />
         </BrowserRouter>
-      </AuthContextProvider> */}
-      <JoinRoomContainer />
+      </AuthContextProvider>
     </>
   );
 }
