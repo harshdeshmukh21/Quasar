@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 import { Button } from "@material-tailwind/react";
 import { UserAuth } from "../../context/AuthContext";
 import { useNavigate } from "react-router-dom";
+import Lofi from '../../components/lofi/lofi'
 
 const Focusedroom = () => {
   const [roomCode, setRoomCode] = useState("");
@@ -60,11 +61,14 @@ const Focusedroom = () => {
 
   return (
     <>
-      <p1 className="mt-32">
+    <div className="home">
+    <p1 className="mt-2 flex items-center justify-center">
         You have now entered the focus room. Please ensure that u stay focused
         and determined to {roomData && roomData.title}
+        <Lofi/>
       </p1>
-
+     
+      
       <p className="m-32 mb-0 cursor-pointer" onClick={() => navigator.clipboard.writeText(id)}>
         {id}
       </p>
@@ -84,6 +88,8 @@ const Focusedroom = () => {
           )}
         </div>
       </div>
+    </div>
+      
     </>
   );
 };

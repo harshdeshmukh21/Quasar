@@ -7,7 +7,6 @@ export const Focusroom = () => {
   return (
     <div className='focus '>
       <img src={focus} alt="" className='rounded-md w-full h-full' />
-
         </div>
   )
 }
