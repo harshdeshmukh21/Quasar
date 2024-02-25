@@ -61,38 +61,23 @@ const Focusedroom = () => {
 
   return (
     <>
-    <div className="home">
-    <p1 className="mt-2 flex items-center justify-center">
-        You have now entered the focus room. Please ensure that u stay focused
-        and determined to {roomData && roomData.title}
-        <Lofi/>
-      </p1>
-     
-      
-      <p className="m-32 mb-0 cursor-pointer" onClick={() => navigator.clipboard.writeText(id)}>
-        {id}
-      </p>
-
-      <Button color="red" onClick={leaveRoom}>
-        Leave Room
-      </Button>
-
-
-      <div className="App">
-        <div className="App-column1">
+      <Lofi/>
+      <div className="focused-room-container">
+        <div className="room-info">
+          <p className="room-message">You have now entered the focus room. Please ensure that you stay focused and determined to {roomData && roomData.title}</p>
+          <p className="room-id p-2 rounded-md" onClick={() => navigator.clipboard.writeText(id)}>{id} <Button color="red" className="m-2 rounded-md" onClick={leaveRoom}>Leave Room</Button></p>
+          
+        </div>
+        <div className="user-profiles">
           {roomData && (
             roomData.displayNames.map((displayName, index) => (
-              <Profile key={index} photoUrl={roomData.photoURLs[index]} displayname={displayName} />
-            )
-            )
+              <Profile key={index} className="user-profile" photoUrl={roomData.photoURLs[index]} displayname={displayName} />
+            ))
           )}
         </div>
       </div>
-    </div>
-      
     </>
   );
 };
-
 
 export default Focusedroom;

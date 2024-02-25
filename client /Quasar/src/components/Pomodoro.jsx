@@ -62,10 +62,10 @@ const PomodoroTimer = () => {
 
   return (
     <div className="flex flex-col  rounded-xl items-center justify-center  text-white p-10 main-pomo">
-      <div className="text-2xl mb-4 flex flex-col ">
+      <div className="text-2xl  mb-4 flex flex-col ">
         {isWorking ? 'Work: ' : 'Break: '}
       </div>
-      <div className="to-lime-400 text-9xl">{formatTime(timer)}</div>
+      <div className="to-lime-400 font-bold text-9xl">{formatTime(timer)}</div>
       <div className="flex space-x-4 m-5">
         <button className="btn-green" onClick={startTimer}>Start</button>
         <button className="btn-red" onClick={stopTimer}>Stop</button>

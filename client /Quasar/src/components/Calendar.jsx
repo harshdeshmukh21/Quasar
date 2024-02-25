@@ -26,7 +26,7 @@ const Calendar = () => {
         {[...Array(firstDayOfMonth).fill(null), ...calendarDays].map((day, index) => (
           <div
             key={index}
-            className={`text-center ${isCurrentDate(day) ? 'bg-blue-500  rounded-md text-white' : ''}`}
+            className={`text-center ${isCurrentDate(day) ? '  bg-purple-500  rounded-md text-white' : ''}`}
           >
             {day || ''}
           </div>

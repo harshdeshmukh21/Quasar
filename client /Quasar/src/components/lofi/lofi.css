@@ -1,7 +1,12 @@
 .App {
-  position: relative;
-    text-align: center;
-  }
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+  text-align: center;
+}
+
   
   .player {
     margin: 50px auto;
