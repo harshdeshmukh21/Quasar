@@ -14,6 +14,8 @@ import { useNavigate } from 'react-router-dom';
 
 
 
+
+
 const Productivity = () => {
 
   const {user , logOut} = UserAuth();
@@ -30,7 +32,7 @@ const FocusGo = () =>{
   return (
     <div>
       
-      <div className="nav-main mt-5 w-full flex justify-center items-center space-x-9 top-10 left-[10rem] md:left-[40rem]">
+     
       <h1 className="  text-xs text-white">Welcome {user.displayName}</h1>
 
         <NavbarMain />
@@ -38,7 +40,7 @@ const FocusGo = () =>{
         <Button color="red" buttonType="filled" size="regular" rounded={false} block={false} iconOnly={false} ripple="light" onClick={LogOut}>
           Log Out
         </Button>
-      </div>
+
 
       <div className="main p-10  flex flex-col justify-center items-center ">
         <div className="flex mt-5">
