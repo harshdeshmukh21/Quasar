@@ -19,10 +19,12 @@
 
 .room-id {
   color: white;
-  width: fit-content;
+  height: 30px;
+  width:100px;
   background-color: rgba(128, 128, 128, 0.466);
   cursor: pointer;
   margin: 20px;
+  padding: 250px;
 }
 
 .user-profiles {
@@ -34,7 +36,7 @@
 }
 
 .user-profile {
-  background-color: #ffffff;
+  background-color: #787878;
   height: 21vh;
   width: 17vw;
   display: flex;
@@ -58,7 +60,7 @@
 .button {
   display: flex;
   height: 35px;
-  width: 120px;
+  width:fit-content;
   flex-direction: row;
   text-align: center;
   justify-content: center;

@@ -54,29 +54,29 @@ const Focusedroom = () => {
       photoURLs: arrayRemove(user.photoURL), // remove current user's photoURL
       displayNames: arrayRemove(user.displayName) // remove current user's displayName
     });
-  
+
     // navigate back to the previous page or home page
-    navigate('/productivity'); 
+    navigate('/productivity');
   }
 
   return (
     <>
-      <Lofi/>
+      <Lofi />
       <div className="focused-room-container flex flex-col">
         <div className="room-info">
           <p className="room-message">You have now entered the focus room. Please ensure that you stay focused and determined to {roomData && roomData.title}</p>
-          
+
         </div>
         <div className="user-profiles">
-          
+
           {roomData && (
             roomData.displayNames.map((displayName, index) => (
               <Profile key={index} className="user-profile" photoUrl={roomData.photoURLs[index]} displayname={displayName} />
             ))
           )}
         </div>
-        <div className="btns"><a className="room-id p-2 mt-52 cursor-pointer rounded-md" onClick={() => navigator.clipboard.writeText(id)}>{id} <Button color="red" className="m-2  cursor-pointer rounded-md" onClick={leaveRoom}>Leave Room</Button></a>
-</div>
+        <div className="btns mt-8 "><a className="room-id p-3  cursor-pointer rounded-md" onClick={() => navigator.clipboard.writeText(id)}>{id} <Button color="red" className="cursor-pointer  mr-0 ml-2 mb-2 mt-2 p-1 rounded-md" onClick={leaveRoom}>Leave Room</Button></a>
+        </div>
 
       </div>
     </>
