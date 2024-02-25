@@ -5,7 +5,7 @@ import React from "react";
 import JoinRoomContainer from "./components/joinroom";
 import { AuthContextProvider } from "./context/AuthContext";
 import { Router } from "./Router";
-import { BrowserRouter } from "react-router-dom";
+import { BrowserRouter} from "react-router-dom";
 
 // import { SignUp } from "./components/signup.jsx";
 // // import { Sticky } from "./components/sticky.jsx";
