@@ -19,8 +19,8 @@ const Todo = ({ task, deleteTodo, editTodo }) => {
         onChange={handleCheckboxChange}
         className="text-x1 flex-start"
       />
-      <div className="flex items-center text-black flex-col gap-x-4 todo">
-        <p className="font-primary ml-4  w-32 todo-container  text-black flex-start">{task.task}</p>
+      <div className="flex items-center flex-col gap-x-4 todo">
+        <p className="font-primary ml-4  w-32 todo-container   flex-start">{task.task}</p>
       </div>
       <div className="flex items-center  todo">
         <BsFillTrashFill
