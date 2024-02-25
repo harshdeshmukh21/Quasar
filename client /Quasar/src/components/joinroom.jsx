@@ -1,9 +1,14 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "../css/joinroom.css";
+<<<<<<< Updated upstream
 import { addDoc } from "firebase/firestore";
 import { useNavigate } from "react-router-dom";
+=======
+import { getDocs, collection, addDoc } from "firebase/firestore";
+import { db } from "../firebase";
+>>>>>>> Stashed changes
 
-const JoinRoomContainer = ({ db }) => {
+const JoinRoomContainer = () => {
   const [roomCode, setRoomCode] = useState("");
   const navigate = useNavigate();
 
@@ -11,7 +16,23 @@ const JoinRoomContainer = ({ db }) => {
     console.log("Creating new room");
     navigate('/focus-room')
 
-    const colRef = collection(db, "room");
+    try {
+      const colRef = collection(db, "room");
+      const snapshot = await getDocs(colRef);
+
+      let createRoom = [];
+      snapshot.forEach((doc) => {
+        createRoom.push({ ...doc.data(), id: doc.id });
+      });
+      console.log(createRoom);
+
+      const newDocRef = await addDoc(colRef, {
+        roomid: roomCode,
+      });
+      console.log("Document written with ID: ", newDocRef.id);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   return (
@@ -34,15 +55,13 @@ const JoinRoomContainer = ({ db }) => {
           onChange={(e) => setRoomCode(e.target.value)}
         />
         <div className="flex justify-center mt-4">
-          <button
-            className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2"
-            // onClick={handleJoinNow}
-          >
+          <button className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2">
             Join Now
           </button>
           <button
             className="bg-green-500 hover:bg-green-600 text-white font-bold py-2 px-4 rounded"
             onClick={handleCreateRoom}
+            id="roombanao"
           >
             Create Room
           </button>

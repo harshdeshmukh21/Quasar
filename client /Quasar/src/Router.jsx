@@ -5,6 +5,7 @@ import  Productivity  from "./components/Productivity.jsx";
 import Focusedroom from './components/focusroom/Focusedroom.jsx';
 import NavbarMain from './components/Navbar.jsx';
 import JoinRoomContainer from './components/joinroom.jsx';
+impo
 import './App.css'
 
 
@@ -21,7 +22,11 @@ export const Router = () => {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/focus-room" element={<Focusedroom />} />
                 <Route path="/focus-join" element={<JoinRoomContainer />} />
+<<<<<<< Updated upstream
  
+=======
+                
+>>>>>>> Stashed changes
             </Routes>
         </>
     );
