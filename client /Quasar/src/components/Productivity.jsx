@@ -24,13 +24,17 @@ const Productivity = () => {
     logOut();
     navigate('/');
   }
-
+const FocusGo = () =>{
+  navigate('/focus-room');
+}
   return (
     <div>
-      <div className="nav-main mt-5 w-full flex justify-center top-10 left-[10rem] md:left-[40rem]">
+      
+      <div className="nav-main mt-5 w-full flex justify-center items-center space-x-9 top-10 left-[10rem] md:left-[40rem]">
+      <h1 className="  text-xs text-white">Welcome {user.displayName}</h1>
+
         <NavbarMain />
-        <h1 className="text-3xl text-white">Welcome {user.displayName}</h1>
-        <img src={user.photoURL} alt="masti" className='rounded-full' />
+        
         <Button color="red" buttonType="filled" size="regular" rounded={false} block={false} iconOnly={false} ripple="light" onClick={LogOut}>
           Log Out
         </Button>
@@ -41,8 +45,8 @@ const Productivity = () => {
           <div className="mx-1">
             <PomodoroTimer />
           </div>
-          <div className="mx-1">
-            <Focusroom />
+          <div className="mx-1 cursor-pointer" onClick={FocusGo}>
+            <Focusroom  />
           </div>
           <div className="mx-1">
             <Calendar />

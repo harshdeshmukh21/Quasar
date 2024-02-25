@@ -12,7 +12,7 @@ const Calendar = () => {
 
   return (
     <div className="mx-auto max-w-lg calendar ">
-      <div className="bg-gray-200 text-gray-600 font-bold text-center p-2">
+      <div className="bg-gray-200 rounded-md text-gray-600 mb-3 font-bold text-center p-2">
         {currentDate.toLocaleString('default', { month: 'long' })} {currentDate.getFullYear()}
       </div>
       <div className="grid grid-cols-7 gap-1 text-white">
@@ -26,7 +26,7 @@ const Calendar = () => {
         {[...Array(firstDayOfMonth).fill(null), ...calendarDays].map((day, index) => (
           <div
             key={index}
-            className={`text-center ${isCurrentDate(day) ? 'bg-blue-500 text-white' : ''}`}
+            className={`text-center ${isCurrentDate(day) ? 'bg-blue-500  rounded-md text-white' : ''}`}
           >
             {day || ''}
           </div>

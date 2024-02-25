@@ -1,12 +1,13 @@
 import React from 'react'
-import focus from './focus.png'
+
 import './pomodoro.css'
+import focus from '../components/focus-box.png'
 
 export const Focusroom = () => {
   return (
     <div className='focus '>
-        <img src={focus} className='img' />
-        <p className='mt-8'>Focus-room</p>
+      <img src={focus} alt="" />
+
         </div>
   )
 }

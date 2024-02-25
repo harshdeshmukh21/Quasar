@@ -10,8 +10,7 @@
     width: 500px;
     height: 300px;
     flex-shrink: 0;
- 
-    background-color: #2A2A2A;
+
     color: white;
     display: flex;
     align-items: center;
@@ -48,12 +47,7 @@ justify-content: space-between;
 
 
 }
-.stick{
-    background-color: white;
-    width: 400px;
-    height: 300px;
 
-}
 
 .goals{
     height: 170px;

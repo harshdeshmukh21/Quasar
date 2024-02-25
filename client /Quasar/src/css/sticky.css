@@ -11,9 +11,10 @@ body {
 .Main {
   display: flex;
   flex-direction: column;
-  width: 25rem;
-  margin-left: 320px;
-  margin-top: 80px;
+  width: 400px;
+  height: 300px;
+
+
 }
 
 .upper {
@@ -23,7 +24,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 7rem;
+  height: 6rem;
 }
 
 .lower {
@@ -33,21 +34,20 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 27rem;
+height: 202px;
 }
-
 .Text {
-  width: 100%; /* Adjust the width as needed */
-  height: 200px; /* Adjust the height as needed */
+  width: 200px; /* Adjust the width as needed */
+  height:80px; /* Adjust the height as needed */
   padding: 10px;
   border: 2px solid none;
   color: white;
-  font-size: 45px;
-  font-weight: bolder;
+  font-weight: bold;
   border-radius: 5px;
   background-color: transparent;
-  resize: none;
+  max-width: 200px;
   outline: none;
-  margin-bottom: 30px;
-  margin-top: 120px;
+  overflow-wrap: break-word;
+
 }
+
