@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './pomodoro.css'
-import focus from '../components/focus-box.png'
+import focus from '../components/focusimg.png'
 
 export const Focusroom = () => {
   return (

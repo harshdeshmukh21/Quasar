@@ -11,6 +11,13 @@ import { UserAuth } from '../context/AuthContext';
 import { Sticky } from './sticky';
 import { Button } from '@material-tailwind/react';
 import { useNavigate } from 'react-router-dom';
+import Chatbot from './chatbot/Chat';
+import { CarouselDefault } from './stick/stickmain';
+
+
+
+
+
 
 
 
@@ -34,9 +41,11 @@ const FocusGo = () =>{
       <div className="main p-10 flex flex-col justify-center items-center">
   <div className="up w-full flex justify-between items-center px-10">
     <h1 className="text-xs text-white">Welcome {user.displayName}</h1>
+    
     <Button color="red" buttonType="filled" size="regular" rounded={false} block={false} iconOnly={false} ripple="light" onClick={LogOut}>
       Log Out
     </Button>
+
   </div>
 
 
@@ -53,13 +62,14 @@ const FocusGo = () =>{
           </div>
         </div>
         <div className="flex justify-around mt-2 ">
-          <div className="mx-1 bg-gray-700 rounded-md ">
+          <div className="mx-1  todo shadow rounded-md ">
             <Todomain />
           </div>
           <div className="widget mx-1 rounded-md"><Goals /><Quotes/></div>
-          <div className="stick mx-1 rounded-md">
-            <Sticky />
+          <div className="stick-main mx-1 rounded-md">
+<    CarouselDefault/>
           </div>
+      
         </div>
       </div>
  

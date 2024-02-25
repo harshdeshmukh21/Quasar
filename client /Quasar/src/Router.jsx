@@ -9,11 +9,14 @@ import './App.css'
 
 
 
+
+
 export const Router = () => {
     return (
         <>
 <div className="nav-main ">
     <NavbarMain />
+
   </div>
             <Routes>
                 <Route path="/" element={<Homepage />} />

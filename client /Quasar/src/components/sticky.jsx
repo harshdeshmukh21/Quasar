@@ -8,7 +8,7 @@ export const Sticky = (props) => {
   const [inputValue, setInputValue] = useState("");
   const clearInput = () => {
     setInputValue("");
-    
+
   };
   return (
     <div className="Main rounded-md">
@@ -23,7 +23,8 @@ export const Sticky = (props) => {
                   color="white"
                   className="mb-4 text-xl md:text-4xl lg:text-5xl"
                 >
-                  NoteMagnet
+                  Note<n/>
+                  Magnet
                 </Typography>
               </div>
               <div className="lower">
