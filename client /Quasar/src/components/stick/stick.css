@@ -1,55 +1,65 @@
-.sticky-note{
-    display: flex;
-    flex-direction: column;
-    background-color:     #BA48FF;
+.sticky-note {
+  display: flex;
+  flex-direction: column;
+  background-color: #e8d30c;
 
-    border-radius: 10px;
-    height: 230px;
-    width: 230px;
-  
+  border-radius: 10px;
+  height: 230px;
+  width: 230px;
 }
-.carousel{
-    background: url(https://images.unsplash.com/photo-1639493115941-a70fcef4f715?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-    object-fit: cover;
+.carousel {
+  /* background: url(https://images.unsplash.com/photo-1639493115941-a70fcef4f715?q=80&w=2400&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D); */
+  object-fit: cover;
+  background-color: #282828;
 }
 .sticky-carousel {
-    width: 230px;
+  width: 230px;
 }
 
-.title{
-    background-color: rgb(0, 0, 0);
-    font-size: 20px;
-    color: white;
-    height: 40%;
-    border-radius: 10px 10px 0 0 ;
+.title {
+  /* background-color: #e8d30c; */
+  font-size: 20px;
+  color: black;
+  height: 40%;
+  border-radius: 10px 10px 0 0;
 }
-.desc{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.desc {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.sticky-title ,.sticky-desc{
-    padding: 20px;
-    width: 200px;
-        background: none;
-    overflow: hidden;
-    resize: none;
-text-align: center;
+.sticky-title,
+.sticky-desc {
+  padding: 20px;
+  width: 200px;
+  background: none;
+  overflow: hidden;
+  resize: none;
+  text-align: center;
+  outline: none;
 }
 .clear-button {
-width: fit-content;
-display: flex;
-justify-content: flex-end;
-margin-left: 200px;
-    background-color: white;
-    color: black;
-    padding: 8px;
-    font-weight: bolder;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .clear-button:hover {
-    background-color: black;
-    color: white;
-  }
+  width: 20px;
+  height: 20px;
+  /* display: flex; */
+  /* justify-content: flex-end; */
+  margin-left: 190px;
+  margin-top: 10px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 8px;
+  font-weight: bolder;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* .clear-button:hover {
+  background-color: black;
+  color: white;
+} */
+
+.X {
+  font-size: small;
+  margin-top: -8px;
+  margin-left: -3px;
+}
