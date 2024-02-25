@@ -27,22 +27,25 @@ const Productivity = () => {
     navigate('/');
   }
 const FocusGo = () =>{
-  navigate('/focus-room');
+  navigate('/focus-join');
 }
   return (
     <div>
       
      
-      <h1 className="  text-xs text-white">Welcome {user.displayName}</h1>
-
-        <NavbarMain />
-        
-        <Button color="red" buttonType="filled" size="regular" rounded={false} block={false} iconOnly={false} ripple="light" onClick={LogOut}>
-          Log Out
-        </Button>
+     
 
 
-      <div className="main p-10  flex flex-col justify-center items-center ">
+      <div className="main p-10 flex flex-col justify-center items-center">
+  <div className="up w-full flex justify-between items-center px-10">
+    <h1 className="text-xs text-white">Welcome {user.displayName}</h1>
+    <Button color="red" buttonType="filled" size="regular" rounded={false} block={false} iconOnly={false} ripple="light" onClick={LogOut}>
+      Log Out
+    </Button>
+  </div>
+
+
+      
         <div className="flex mt-5">
           <div className="mx-1">
             <PomodoroTimer />

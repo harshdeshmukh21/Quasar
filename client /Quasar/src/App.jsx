@@ -16,12 +16,12 @@ import { BrowserRouter } from "react-router-dom";
 function App() {
   return (
     <>
-      {/* <AuthContextProvider>
+      <AuthContextProvider>
         <BrowserRouter>
           <Router />
         </BrowserRouter>
-      </AuthContextProvider> */}
-      <JoinRoomContainer />
+      </AuthContextProvider>
+
     </>
   );
 }

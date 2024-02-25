@@ -9,7 +9,7 @@ body {
 }
 
 .Main {
-
+  width: 300px;
   display: flex;
   flex-direction: column;
   width: 400px;
@@ -51,4 +51,9 @@ height: 202px;
   overflow-wrap: break-word;
 
 }
+.box{
+width: 400px;
+padding:0 ;
+}
+
 

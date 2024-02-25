@@ -12,7 +12,7 @@ const Todo = ({ task, deleteTodo, editTodo }) => {
         <p className="font-primary ml-4 flex-start">{task.task}</p>
       </div>
       <div className="flex items-center gap-x-4 todo">
-        <AiFillEdit className="text-x1 flex-end" onClick={() => editTodo(task.id)} />
+        <AiFillEdit className="text-x1 flex" onClick={() => editTodo(task.id)} />
         <BsFillTrashFill
           className="text-x1 flex-end"
           onClick={() => deleteTodo(task.id)}

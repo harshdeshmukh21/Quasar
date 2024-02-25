@@ -8,6 +8,7 @@ const NavbarMain = () => {
                 <a className='text-xl ml-2 mr-2 text-black'>Focus Room</a>
                 <a className='text-xl ml-2 mr-2 font-bold text-black'>Quasar</a>
                 <a className='text-xl ml-2 mr-2 text-black'>Productivity</a>
+                
             </div>
         </>
     )

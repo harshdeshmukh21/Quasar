@@ -24,3 +24,13 @@
     100%{background-position:0% 50%}
 }
 
+
+.nav-main {
+    position: fixed;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Adjust the z-index as needed */
+  }
+  
+
