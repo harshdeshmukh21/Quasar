@@ -21,7 +21,6 @@ function App() {
           <Router />
         </BrowserRouter>
       </AuthContextProvider>
-
     </>
   );
 }

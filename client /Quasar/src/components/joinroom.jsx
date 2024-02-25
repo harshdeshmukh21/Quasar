@@ -1,25 +1,14 @@
 import React, { useState } from "react";
 import "../css/joinroom.css";
-// import NavbarMain from "./Navbar";
+import { addDoc } from "firebase/firestore";
 
-const JoinRoomContainer = () => {
+const JoinRoomContainer = ({ db }) => {
   const [roomCode, setRoomCode] = useState("");
 
-  const handleJoinNow = () => {
-    if (roomCode.trim() === "") {
-      alert("Please enter a room code");
-      return;
-    }
-
-    console.log("Joining room with code:", roomCode);
-
-    setRoomCode("");
-  };
-
-  const handleCreateRoom = () => {
+  const handleCreateRoom = async () => {
     console.log("Creating new room");
 
-    setRoomCode("");
+    const colRef = collection(db, "room");
   };
 
   return (
@@ -32,7 +21,7 @@ const JoinRoomContainer = () => {
           <h1>Join Room</h1>
         </div>
         <div className="text-2xl font-bold mb-8">
-          Join or create an exclusive focus room where <br></br> all your
+          Join or create an exclusive focus room where <br /> all your
           distractions fade and productivity prevails!
         </div>
         <input
@@ -44,7 +33,7 @@ const JoinRoomContainer = () => {
         <div className="flex justify-center mt-4">
           <button
             className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded mr-2"
-            onClick={handleJoinNow}
+            // onClick={handleJoinNow}
           >
             Join Now
           </button>
