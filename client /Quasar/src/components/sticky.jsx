@@ -4,10 +4,11 @@ import { Carousel, Typography, Button } from "@material-tailwind/react";
 // import { Textarea } from "@material-tailwind/react";
 import { useState } from "react";
 
-export const Sticky = () => {
+export const Sticky = (props) => {
   const [inputValue, setInputValue] = useState("");
   const clearInput = () => {
     setInputValue("");
+    
   };
   return (
     <div className="Main rounded-md">
@@ -26,36 +27,36 @@ export const Sticky = () => {
                 </Typography>
               </div>
               <div className="lower">
-  <div className=" inset-0 grid  w-full place-items-center">
-    <div className="text-center">
-      <div className="flex text-center">
-        <input
-          type="text"
-          placeholder="Edit Text"
-          className="Text text-center "
-          style={{ width: "200px",overflowWrap:"break-word" }} // Adjust the width as needed
-          value={inputValue}
-          onChange={(e) => setInputValue(e.target.value)}
-        />
-      </div>
+                <div className=" inset-0 grid  w-full place-items-center">
+                  <div className="text-center">
+                    <div className="flex text-center">
+                      <input
+                        type="text"
+                        placeholder="Edit Text"
+                        className="Text text-center "
+                        style={{ width: "200px", overflowWrap: "break-word" }} // Adjust the width as needed
+                        value={inputValue}
+                        onChange={(e) => setInputValue(e.target.value)}
+                      />
+                    </div>
 
-      <div className=" gap-2">
-        <button
-          className="bg-white text-black px-4 py-2 rounded-lg"
-          onClick={clearInput}
-        >
-          X
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
+                    <div className=" gap-2">
+                      <button
+                        className="bg-white text-m text-bold text-black px-4 py-2 rounded-lg"
+                        onClick={clearInput}
+                      >
+                        X
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
-           
+
           </div>
 
-          {/* Repeat the above structure for the remaining four carousels */}
+          {/* Repeat the above structure for the remaining four carousels
           <div className="relative h-full w-full">
             <div className="Box">
               <div className="upper">
@@ -202,7 +203,7 @@ export const Sticky = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
         </Carousel>
       </div>
     </div>

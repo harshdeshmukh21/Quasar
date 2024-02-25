@@ -31,11 +31,6 @@ const FocusGo = () =>{
 }
   return (
     <div>
-      
-     
-     
-
-
       <div className="main p-10 flex flex-col justify-center items-center">
   <div className="up w-full flex justify-between items-center px-10">
     <h1 className="text-xs text-white">Welcome {user.displayName}</h1>
@@ -57,8 +52,8 @@ const FocusGo = () =>{
             <Calendar />
           </div>
         </div>
-        <div className="flex justify-around mt-5 ">
-          <div className="mx-2 bg-gray-700 rounded-md ">
+        <div className="flex justify-around mt-2 ">
+          <div className="mx-1 bg-gray-700 rounded-md ">
             <Todomain />
           </div>
           <div className="widget mx-1 rounded-md"><Goals /><Quotes/></div>
