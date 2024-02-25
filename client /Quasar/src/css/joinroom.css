@@ -10,6 +10,8 @@ body {
 #main {
   background-image: url(./Joinrm-bg.png);
   background-size: contain;
+  height: 100vh;
+  width: 100%;
 }
 
 .box {

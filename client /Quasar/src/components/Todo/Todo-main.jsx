@@ -1,9 +1,9 @@
 
 import TodoList from './Todolist/Todolist'
-
+import './todo.css'
 function Todomain() {
   return (
-    <div>
+    <div className='form'>
       <TodoList />
     </div>
   );

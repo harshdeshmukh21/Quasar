@@ -1,14 +1,33 @@
 import React from 'react'
 import NavbarMain from '../Navbar'
+import Profile from './Profile'
+import './focusroom.css'
+
 
 const Focusedroom = () => {
 
   return (
-    <><div className="nav-main mt-5 w-full flex justify-center top-10 left-[10rem] md:left-[40rem]">
-    <NavbarMain />
-  </div>
+    <>
+<p1 className="mt-32">You have now entered the focus room. Please ensure that u stay focused and determined to your task. </p1>
+    
+    <div className="App">
+      <div className="App-column1">
+      <div className="user-container">
+        <Profile />
+      </div>
+      <div className="user-container">
+        <Profile />
+      </div>
+      <div className="user-container">
+        <Profile />
+      </div>
+      <div className="user-container">
+        <Profile />
+      </div>
+    </div>
 
 
+    </div>
     
 
   </>

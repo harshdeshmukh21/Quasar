@@ -21,6 +21,7 @@ export const Router = () => {
                 <Route path="/signup" element={<SignUp />} />
                 <Route path="/focus-room" element={<Focusedroom />} />
                 <Route path="/focus-join" element={<JoinRoomContainer />} />
+ 
             </Routes>
         </>
     );

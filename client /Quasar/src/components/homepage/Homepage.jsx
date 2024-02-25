@@ -11,9 +11,7 @@ export const Homepage = () => {
 
   return (
     <>
-      <div className="nav-main absolute top-10 left-[10rem] md:left-[40rem] ">
-        <NavbarMain />
-      </div>
+
       <div className='container-main'>
         <section className='hero h-screen flex flex-col'>
           <div className="title">
@@ -24,10 +22,10 @@ export const Homepage = () => {
           </div>
          
         </section>
-        <section >
+        {/* <section >
           <h1 className='text-9xl w-screen text-white text-center m-10'>Features</h1>
           <img src={pages} alt="" className='m-20 h-1/5'/>
-        </section>
+        </section> */}
       </div>
     </>
   )

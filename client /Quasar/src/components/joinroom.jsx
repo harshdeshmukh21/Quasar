@@ -1,12 +1,15 @@
 import React, { useState } from "react";
 import "../css/joinroom.css";
 import { addDoc } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 
 const JoinRoomContainer = ({ db }) => {
   const [roomCode, setRoomCode] = useState("");
+  const navigate = useNavigate();
 
   const handleCreateRoom = async () => {
     console.log("Creating new room");
+    navigate('/focus-room')
 
     const colRef = collection(db, "room");
   };
