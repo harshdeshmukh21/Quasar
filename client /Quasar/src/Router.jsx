@@ -10,29 +10,6 @@ import "./App.css";
 
 
 export const Router = () => {
-<<<<<<< Updated upstream
-    return (
-        <>
-<div className="nav-main ">
-    <NavbarMain />
-
-  </div>
-            <Routes>
-                <Route path="/" element={<Homepage />} />
-                <Route path="/productivity" element={<Productivity />} />
-                <Route path="/signup" element={<SignUp />} />
-                <Route path="/focus-room" element={<Focusedroom />} />
-                <Route path="/focus-join" element={<JoinRoomContainer />} />
-<<<<<<< Updated upstream
- 
-=======
-                
->>>>>>> Stashed changes
-            </Routes>
-        </>
-    );
-    }
-=======
   return (
     <>
       <div className="nav-main ">
@@ -42,10 +19,9 @@ export const Router = () => {
         <Route path="/" element={<Homepage />} />
         <Route path="/productivity" element={<Productivity />} />
         <Route path="/signup" element={<SignUp />} />
-        <Route path="/focus-room" element={<Focusedroom />} />
         <Route path="/focus-join" element={<JoinRoomContainer />} />
+        <Route path="/focus-room/:id" element={<Focusedroom />} />
       </Routes>
     </>
   );
 };
->>>>>>> Stashed changes

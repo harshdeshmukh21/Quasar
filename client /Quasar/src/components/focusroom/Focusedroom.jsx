@@ -1,74 +1,92 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import NavbarMain from "../Navbar";
 import Profile from "./Profile";
 import "./focusroom.css";
-import { getDocs, collection, addDoc } from "firebase/firestore";
+import { getDocs, collection, updateDoc, doc, getDoc, onSnapshot, arrayRemove } from "firebase/firestore";
 import { db } from "../../firebase";
+import { useParams } from "react-router-dom";
+import { Button } from "@material-tailwind/react";
+import { UserAuth } from "../../context/AuthContext";
+import { useNavigate } from "react-router-dom";
 
 const Focusedroom = () => {
-  const [roomCode, setRoomCode] = useState(""); // Moved the useState here
+  const [roomCode, setRoomCode] = useState("");
+  const { id } = useParams();
+  const [roomData, setRoomData] = useState(null);
+  const navigate = useNavigate();
 
-  const handleCreateRoom = async () => {
-    console.log("Creating new room");
+  const { user } = UserAuth();
 
-    try {
-      const colRef = collection(db, "room");
-      const snapshot = await getDocs(colRef);
+  useEffect(() => {
+    const fetchRoomData = async () => {
+      const docRef = doc(db, "room", id);
+      const docSnap = await getDoc(docRef);
 
-      let createRoom = [];
-      snapshot.forEach((doc) => {
-        createRoom.push({ ...doc.data(), id: doc.id });
-      });
-      console.log(createRoom);
+      if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data());
+        setRoomData(docSnap.data());
+      } else {
+        console.log("No such document!");
+      }
+    };
 
-      const newDocRef = await addDoc(colRef, {
-        roomid: roomCode,
-      });
-      console.log("Document written with ID: ", newDocRef.id);
-    } catch (err) {
-      console.log(err.message);
-    }
-  };
+    fetchRoomData();
+    const docRef = doc(db, "room", id);
+    const unsubscribe = onSnapshot(docRef, (docSnap) => {
+      if (docSnap.exists()) {
+        console.log("Document data:", docSnap.data());
+        setRoomData(docSnap.data());
+      } else {
+        console.log("No such document!");
+      }
+    });
+
+    // Clean up the listener when the component unmounts
+    return () => unsubscribe();
+  }, [id]);
+
+  console.log(roomData);
+
+  const leaveRoom = async () => {
+    const docRef = doc(db, "room", id);
+    await updateDoc(docRef, {
+      photoURLs: arrayRemove(user.photoURL), // remove current user's photoURL
+      displayNames: arrayRemove(user.displayName) // remove current user's displayName
+    });
+  
+    // navigate back to the previous page or home page
+    navigate('/productivity'); 
+  }
 
   return (
     <>
       <p1 className="mt-32">
         You have now entered the focus room. Please ensure that u stay focused
-        and determined to your task.
+        and determined to {roomData && roomData.title}
       </p1>
 
-      <p1 className="">Create a topic for your room</p1>
+      <p className="m-32 mb-0 cursor-pointer" onClick={() => navigator.clipboard.writeText(id)}>
+        {id}
+      </p>
 
-      <div className="enter">
-        <input
-          className="input"
-          placeholder="Enter room code"
-          value={roomCode}
-          onChange={(e) => setRoomCode(e.target.value)}
-        />
-        <button onClick={handleCreateRoom} className="button">
-          Create
-        </button>
-      </div>
+      <Button color="red" onClick={leaveRoom}>
+        Leave Room
+      </Button>
+
 
       <div className="App">
         <div className="App-column1">
-          <div className="user-container">
-            <Profile />
-          </div>
-          <div className="user-container">
-            <Profile />
-          </div>
-          <div className="user-container">
-            <Profile />
-          </div>
-          <div className="user-container">
-            <Profile />
-          </div>
+          {roomData && (
+            roomData.displayNames.map((displayName, index) => (
+              <Profile key={index} photoUrl={roomData.photoURLs[index]} displayname={displayName} />
+            )
+            )
+          )}
         </div>
       </div>
     </>
   );
 };
+
 
 export default Focusedroom;
