@@ -8,7 +8,7 @@ const Form = ({ createTodo }) => {
     setValue("");
   };
   return (
-    <form className="mb-4 font-primary w-full" onSubmit={handleSubmit}>
+    <form className="mb-4 font-primary bg-white w-full" onSubmit={handleSubmit}>
       <input
         type="text"
         className="outline-none bg-transparent border-gray-500 py-4 px-4 w-[300px] text-white mb-8 rounded placeholder:text-gray-300"
