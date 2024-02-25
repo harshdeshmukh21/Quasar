@@ -6,8 +6,7 @@ import Focusedroom from "./components/focusroom/Focusedroom.jsx";
 import NavbarMain from "./components/Navbar.jsx";
 import JoinRoomContainer from "./components/joinroom.jsx";
 import "./App.css";
-
-
+import AppAI from "./components/AI/App-ai.jsx";
 
 export const Router = () => {
   return (
@@ -21,6 +20,7 @@ export const Router = () => {
         <Route path="/signup" element={<SignUp />} />
         <Route path="/focus-join" element={<JoinRoomContainer />} />
         <Route path="/focus-room/:id" element={<Focusedroom />} />
+        <Route path="/QuasarAI" element={<AppAI />} />
       </Routes>
     </>
   );
