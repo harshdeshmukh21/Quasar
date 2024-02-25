@@ -22,7 +22,7 @@ const Todo = ({ task, deleteTodo, editTodo }) => {
       <div className="flex items-center bg-white text-black flex-col gap-x-4 todo">
         <p className="font-primary ml-4  w-32 todo-container bg-white text-black flex-start">{task.task}</p>
       </div>
-      <div className="flex items-center  todo">
+      <div className="flex items-center  todo-bin">
         <BsFillTrashFill
           className="text-x1 h-4 flex-end"
           onClick={() => deleteTodo(task.id)}
