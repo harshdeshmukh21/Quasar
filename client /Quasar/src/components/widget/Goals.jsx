@@ -10,9 +10,9 @@ const Goals = () => {
 
   return (
     <div>
-      <div className="goals flex flex-col p-3 items-center rounded-md	 text-3xl"><label className='font-bold' >This is Your Todays Goal:</label>
+      <div className="goals flex flex-col p-3 items-center rounded-md	 text-3xl"><label className=' font-semibold' >Todays Goal</label>
       <input
-      placeholder='Edit here'
+      placeholder='Insert here'
   className='m-2 h-20 bg-transparent text-3xl flex flex-wrap text-center '
         type="text"
         id="goal"
