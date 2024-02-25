@@ -59,11 +59,10 @@ justify-content: space-between;
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: gray;
-
 }
 
 .goals{
+    color: white;
     height: 170px;
     padding: 20px;
     background: radial-gradient(125% 125% at 50% 10%, #000 40%, #63e 100%);

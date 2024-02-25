@@ -17,9 +17,9 @@ const Stick = () => {
         <input
           type="text"
           placeholder="Title"
-          value={title}
+          value='NoteMagnet'
           onChange={(e) => setTitle(e.target.value)}
-          className="sticky-title"
+          className="sticky-title font-bold "
         />
       </div>
       <div className="desc ">
