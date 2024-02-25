@@ -62,19 +62,22 @@ const Focusedroom = () => {
   return (
     <>
       <Lofi/>
-      <div className="focused-room-container">
+      <div className="focused-room-container flex flex-col">
         <div className="room-info">
           <p className="room-message">You have now entered the focus room. Please ensure that you stay focused and determined to {roomData && roomData.title}</p>
-          <p className="room-id p-2 rounded-md" onClick={() => navigator.clipboard.writeText(id)}>{id} <Button color="red" className="m-2 rounded-md" onClick={leaveRoom}>Leave Room</Button></p>
           
         </div>
         <div className="user-profiles">
+          
           {roomData && (
             roomData.displayNames.map((displayName, index) => (
               <Profile key={index} className="user-profile" photoUrl={roomData.photoURLs[index]} displayname={displayName} />
             ))
           )}
         </div>
+        <div className="btns"><a className="room-id p-2 mt-52 cursor-pointer rounded-md" onClick={() => navigator.clipboard.writeText(id)}>{id} <Button color="red" className="m-2  cursor-pointer rounded-md" onClick={leaveRoom}>Leave Room</Button></a>
+</div>
+
       </div>
     </>
   );

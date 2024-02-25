@@ -20,7 +20,7 @@
 .room-id {
   color: white;
   width: fit-content;
-  background-color: rgb(128, 128, 128);
+  background-color: rgba(128, 128, 128, 0.466);
   cursor: pointer;
   margin: 20px;
 }
@@ -34,7 +34,7 @@
 }
 
 .user-profile {
-  background-color: #393737;
+  background-color: #ffffff;
   height: 21vh;
   width: 17vw;
   display: flex;
