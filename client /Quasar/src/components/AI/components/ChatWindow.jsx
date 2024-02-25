@@ -13,7 +13,7 @@ const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
 const Header = () => {
   return (
-    <div className="header">
+    <div className="header" style={{ marginTop: "70px" }}>
       <h1 id="chat-header">
         {/* <img src={logo} alt="gemini" width={120} /> */}
         <b style={{ marginLeft: 5 }}>Qausar.AI</b>
