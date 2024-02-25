@@ -1,0 +1,34 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#main {
+  background-image: url(./Joinrm-bg.png);
+  background-size: contain;
+}
+
+.box {
+  width: 900px;
+  height: 500px;
+  background-color: rgba(41, 41, 41, 0.4);
+  color: white;
+  /* opacity: 0.5; */
+  padding: 20px 20px 20px 20px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  margin-top: 100px;
+  resize: none;
+  outline: none;
+  border: 2px solid none;
+  border-radius: 4px;
+}
