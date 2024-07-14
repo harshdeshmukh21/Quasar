@@ -1,7 +1,5 @@
-import React, { useState, useRef } from 'react';
-import './pomodoro.css'
-
-
+import React, { useState, useRef } from "react";
+import "./pomodoro.css";
 
 const PomodoroTimer = () => {
   const [timer, setTimer] = useState(25 * 60); // Initial timer value (25 minutes)
@@ -53,25 +51,33 @@ const PomodoroTimer = () => {
   };
 
   const formatTime = (time) => {
-    const minutes = Math.floor(time / 60).toString().padStart(2, '0');
-    const seconds = (time % 60).toString().padStart(2, '0');
+    const minutes = Math.floor(time / 60)
+      .toString()
+      .padStart(2, "0");
+    const seconds = (time % 60).toString().padStart(2, "0");
     return `${minutes}:${seconds}`;
   };
 
-
-
   return (
-    <div className="flex flex-col  rounded-xl items-center justify-center  text-white p-10 main-pomo">
-      <div className="text-2xl  mb-4 flex flex-col ">
-        {isWorking ? 'Work: ' : 'Break: '}
+    <div className="flex flex-col  rounded-xl items-center justify-center  text-white p-10 main-pomo bg-[#282828] h-[39vh]">
+      <div className="text-2xl  mb-4 flex flex-col">
+        {isWorking ? "Work: " : "Break: "}
       </div>
       <div className="to-lime-400 font-bold text-9xl">{formatTime(timer)}</div>
       <div className="flex space-x-4 m-5">
-        <button className="btn-green" onClick={startTimer}>Start</button>
-        <button className="btn-red" onClick={stopTimer}>Stop</button>
-        <button className="btn-blue" onClick={resetTimer}>Reset</button>
+        <button className="btn-green" onClick={startTimer}>
+          Start
+        </button>
+        <button className="btn-red" onClick={stopTimer}>
+          Stop
+        </button>
+        <button className="btn-blue" onClick={resetTimer}>
+          Reset
+        </button>
         {!isWorking && (
-          <button className="btn-orange" onClick={skipBreak}>Skip Break</button>
+          <button className="btn-orange" onClick={skipBreak}>
+            Skip Break
+          </button>
         )}
       </div>
     </div>

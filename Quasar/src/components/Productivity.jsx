@@ -30,7 +30,7 @@ const Productivity = () => {
     <div>
       <div className="main p-10 flex flex-col justify-center items-center">
         <div className="up w-full flex justify-between items-center px-10">
-          <h1 className="text-xs text-white">Welcome {user.displayName}</h1>
+          <h1 className="text-s text-white">Welcome {user.displayName}</h1>
 
           <Button
             color="red"
